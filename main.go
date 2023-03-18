@@ -91,7 +91,8 @@ type ZhanKu struct {
 func GetList() []*ZhanKu {
 	var res []*ZhanKu
 	for i := 1; i <= *count; i++ {
-		urlFmt := "https://www.zcool.com.cn/p1/discover/list?cate=609&city=0&college=0&has_video=0&recommend_level=2&sort=9&sub_cate=637&p=%d&ps=20&column=5"
+		//urlFmt := "https://www.zcool.com.cn/p1/discover/list?cate=609&city=0&college=0&has_video=0&recommend_level=2&sort=9&sub_cate=637&p=%d&ps=20&column=5"
+		urlFmt := "https://www.zcool.com.cn/p1/discover/list?cate=609&city=0&college=0&has_video=0&recommend_level=2&sort=9&p=%d&ps=16&column=4"
 		url := fmt.Sprintf(urlFmt, i)
 		// 创建一个 HTTP GET 请求
 		req, err := http.NewRequest("GET", url, nil)
